@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibrahim Sorie's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img-photo/ibrahim-favcon.jpg">
+  <style>
+    @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .home h2 {
+        font-size: 2rem;
+    }
+    .home p {
+        font-size: 1.2rem;
+    }
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #2a2a2a;
+  color: #333;
+}
+.head{
+    width: 7%; 
+    height: 7%; 
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 2px solid #7dd3fc;
+    margin-right: 1%;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  color: #7dd3fc;
+  font-size: 250%;
+}
+h4{
+  color: #7dd3fc;
+  font-size: 150%;
+
+}
+
+a {
+  text-decoration: none;
+  color: #7dd3fc;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar {
+  background: #242424;
+  color: #7dd3fc;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 25%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7dd3fc;
+  cursor: pointer;
+  transition: color 0.5s;
+ 
+}
+
+.logo:hover {
+  color: #00a8f7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+ 
+  
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #7dd3fc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aeff;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-color: #2a2a2a}
+
+.home h2 {
+    margin-top: 15%;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+.home p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+.home .btn {
+  
+    animation: bounce 2s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+.about {
+
+  margin-top: 5%;
+  padding: 50px 0px;
+  
+  background:  #242424;
+  
+}
+.about h2{
+  margin-left: 40%;
+}
+
+.about p {
+  margin: 20px 0;
+  color: #636161;
+}
+
+.container1 {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 48%;
+  height: 100%;
+  margin: 0;
+ 
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 195, 255, 0.2);
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.card-content h2 {
+  color: #7dd3fc;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #b5dcee;
+  font-weight: bold;
+}
+
+.projects {
+  padding: 50px 0;
+  background: #2a2a2a;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-item {
+  background: #242424;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(78, 229, 249, 0.5);
+  transition: transform 0.3s, box-shadow 0.5s;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 195, 255, 0.2);
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-item h4 {
+  margin: 10px;
+  color: #7dd3fc;
+}
+
+.project-item p {
+  margin: 10px;
+  color: #707070;
+}
+
+.btn-card{
+  display: inline-block;
+  padding: 10px 0px 10px 0px;
+  margin-left: 19%;
+  display: flex;
+
+  align-items: center ;
+  
+  justify-content: center;
+  margin-bottom: 15px;
+  background: #7dd3fc;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.5s;
+  width: 60%;
+}
+
+
+.btn-card:hover{
+  
+  background: #00adfd;
+  transform: scale(1.1);
+}
+
+.skills {
+  padding: 50px 0;
+  background: #242424;
+  color: #fff;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill {
+  padding: 10px 20px;
+  background: #7dd3fc;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 195, 255, 0.5);;
+}
+
+.skill:hover{
+  background-color: #00a8f7 ;
+}
+
+.contact {
+  padding: 50px 0;
+  background: #2a2a2a ;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border: 1px solid #00a8f7;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact button {
+  align-self: flex-start;
+}
+
+
+#footer {
+  text-align: center;
+  background: #242424;
+  color: #7dd3fc;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7dd3fc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.5s;
+}
+
+.btn:hover {
+  background: #00adfd;
+  transform: scale(1.1);
+}
+
+
+
+  </style>
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <img src="img-photo/ibrahim-head.jpg" class="head" alt="">
+                <h1 class="logo">Ibrahim Sorie's Portfolio</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="container">
+            <h2>Hi, I'm Ibrahim Sorie Jalloh</h2>
+            <p>An Aspiring Qur'an Reciter | Web Developer | Problem Solver</p>
+            <a href="#projects" class="btn">View my Work</a>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a dedicated computer science student with a strong passion for technology, creativity, 
+                and personal growth. My journey blends technical skills with a deep appreciation 
+                for my faith, Islam, as I actively engage in web development, Quran recitations,
+                and exploring ways to use technology to benefit the Muslim community. I believe 
+                that innovation and spirituality can go hand in hand, allowing me to merge modern
+                advancements with timeless Islamic values. Whether it's building digital solutions, 
+                studying the Quran, or sharing knowledge, I strive to inspire others by using technology 
+                as a tool for both personal and collective growth. 
+                My goal is to create meaningful projects that not only advance technology
+                but also strengthen faith and community
+            </p>
+        </div>
+
+        <section>
+            <div class="container1">
+                <div class="card">
+                    <img src="img-photo/jalloh.jpg" alt="Ibrahim's Photo">
+                    <div class="card-content">
+                        <h4>Personal and Professional</h4>
+                        <p>
+                          Hi I’m <span class="highlight">Ibrahim Sorie Jalloh</span>, a computer science student passionate about 
+                          <span class="highlight">technology</span>, <span class="highlight">creativity</span>, and personal growth.
+                          I’m also dedicated to <span class="highlight">Web Development and Quran recitations</span>,
+                          My faith is also a big part of my life, and I enjoy blending my love for
+                          Quran recitations with my tech journey."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="img-photo/Sorie.jpg" alt="Ibrahim's Photo">
+                    <div class="card-content">
+                        <h4>Creative and Inspirational</h4>
+                        <p>
+                           I’m <span class="highlight">Ibrahim Sorie Jalloh</span>, a C.S student on a journey to mix creativity with 
+                           <span class="highlight">technology</span> and <span class="highlight">faith</span> 
+                           I’m passionate about building new things, learning every day, and staying connected to my 
+                           faith through Quran recitations. For me, 
+                           it’s all about growing, and making every project meaningful."
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+
+      
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="img-project/Ibrahim-project-1.png" alt="Project 1">
+                        <h4>A Podcast Platform</h4>
+                        <p>a podacast that allow user to download music and more. </p>
+                        <a href="https://ibrahimsorie.infinityfreeapp.com/" class="btn-card">View</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="img-project/ibrahim-project-2.png" alt="Project 2">
+                        <h4>A daily task Planner</h4>
+                        <p>A daily task Planner that help in Schedule your daily activity by Reminder </p>
+                        <a href="https://precious-taiyaki-c85733.netlify.app/" class="btn-card">View</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-list">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Quran Reciter</div>
+                    <div class="skill">Quran Sound Editing</div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form  action="https://formspree.io/f/xkgoankl"method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2025 Ibrahim Sorie Jalloh. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
